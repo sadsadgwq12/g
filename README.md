@@ -988,16 +988,6 @@ local args = {
 
 game:GetService("Players").LocalPlayer.Character:FindFirstChild("Sea's Revenge").RemoteFunction:InvokeServer(unpack(args))
 end)
-FunSection:NewButton("crash server lol", "yes", function()
-__Player__ = game:GetService("Players").LocalPlayer
-__Character__ = __Player__.Character
-function __Place__(arg1, arg2)
-    __Player__.Backpack.BuildTool.RemoteFunction:InvokeServer("placeobject", { arg1, arg2 })
-end
-game.RunService.Stepped:Connect(function()
-    __Place__(workspace.Mine2.oreSpawn, workspace.Mine2.oreSpawn)
-    end)
-end)
 FunSection:NewButton("nuke server with alot of mesh", "yes", function()
 local args = {
     [1] = "placeobject",
